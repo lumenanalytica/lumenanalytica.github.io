@@ -1,0 +1,148 @@
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    background-color: #0e0e10;
+    color: #f1f1f1;
+    overflow-x: hidden;
+    margin: 0;
+
+    /* === BACKGROUND IMAGE SETUP ===
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  /* Translucent overlay for tone and depth */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(10, 10, 12, 0.65),
+      rgba(10, 10, 12, 0.85)
+    );
+    backdrop-filter: blur(6px);
+    z-index: -1; /* keeps it behind all visible content */
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    background: rgba(20, 20, 22, 0.75); /* translucent black glass effect */
+    border-right: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+/*
+  .sidebar h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.4;
+  }
+ */
+
+/* Logo replaces text title */
+.sidebar .logo {
+  width: 160px;             /* adjust as needed */
+  height: auto;             /* keep aspect ratio */
+  margin-bottom: 2rem;      /* space below logo */
+  filter: drop-shadow(0 0 4px rgba(0, 209, 255, 0.4)); /* optional glow */
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.sidebar .logo:hover {
+  transform: scale(1.05);
+}
+
+  .sidebar nav a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin: 0.75rem 0;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+
+  .sidebar nav a:hover {
+    color: #00d1ff;
+  }
+
+  .sidebar .social a {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+  }
+
+  .sidebar .social a:hover {
+    color: #00d1ff;
+  }
+
+  /* CONTENT */
+  .content {
+    margin-left: 240px;
+  }
+
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 3rem;
+    border-bottom: 1px solid #222;
+  }
+
+  section h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  section p {
+    max-width: 700px;
+    line-height: 1.7;
+    color: #ccc;
+  }
+
+  @media (max-width: 992px) {
+    .sidebar {
+      position: static;
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      justify-content: space-around;
+      border-right: none;
+      border-bottom: 1px solid #222;
+      padding: 1rem;
+    }
+
+    .content {
+      margin-left: 0;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      align-items: center;
+      text-align: center;
+    }
+  }
